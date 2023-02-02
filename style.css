@@ -1,0 +1,647 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    color: #462f0e;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+input, select {
+    vertical-align:middle;
+    outline: none;
+}
+body {
+    background: #fefaf4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #462f0e;
+}
+.matrix_width-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1636px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+}
+.matrix_clearfix-after:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section {
+    padding: 10px 0;
+    border-bottom: 1px solid #e3af66;
+}
+
+header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e3af66;
+    background: #f8d6a5;
+}
+    header .matrix_logo-container {
+        text-align: center;
+    }
+        header .matrix_logo-container .matrix_logo {
+            display: inline-block;
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: bold;
+            color: #f7b150;
+            text-decoration: none;
+            text-transform: uppercase;
+		
+        }
+            header .matrix_logo-container .matrix_logo span {
+                color: #462f0e;
+            }
+        header .matrix_search-container {
+            position: relative;
+            clear: both;
+        }
+            header .matrix_search-container .matrix_search-block {
+                display: block;
+                position: relative;
+            }
+                header .matrix_search-container .matrix_search-block .matrix_search-input {
+				     padding-top:5px;
+                    display: block;
+                    float: right;
+					text-align:center;
+                    max-width: 460px;
+                }
+.matrix_heading {
+    margin: 0 0 5px;
+}
+    .matrix_heading h1,
+    .matrix_heading h2 {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+        color: #462f0e;
+    }
+.matrix_thumbs-list {
+    margin: 0 -2px;
+    text-align: center;
+    letter-spacing: -5px;
+}
+    .matrix_thumbs-list .matrix_thumb {
+        display: inline-block;
+        width: 100%;
+        padding: 0 2px 4px;
+        letter-spacing: 0;
+    }
+        .matrix_thumbs-list .matrix_thumb .matrix_link {
+            display: block;
+            text-decoration: none;
+        }
+            .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container {
+                position: relative;
+                overflow: hidden;
+                border: 1px solid #e3af66;
+            }
+                .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container img {
+                    display: block;
+                    width: 100%;
+                }
+                .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_movies {
+                    display: block;
+                    position: absolute;
+                    right: 3px;
+                    bottom: 3px;
+                    height: 24px;
+                    padding: 0 5px;
+                    background: rgba(0,0,0,0.75);
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #462f0e;
+                    transition: 0.15s ease right;
+                }
+                    .matrix_thumbs-list .matrix_thumb .matrix_link:hover .matrix_thumb-container .matrix_movies {
+                        right: -100px;
+                    }
+
+                .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_duration {
+                    display: block;
+                    position: absolute;
+                    right: 3px;
+                    top: 3px;
+                    height: 24px;
+                    padding: 0 5px;
+                    background: rgba(0,0,0,0.75);
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #fafafa;
+                    transition: 0.15s ease right;
+                }
+                    .matrix_thumbs-list .matrix_thumb .matrix_link:hover .matrix_thumb-container .matrix_duration {
+                        right: -100px;
+                    }
+
+                .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_title {
+                    display: block;
+                    position: absolute;
+                    left: 3px;
+                    bottom: 3px;
+                    height: 24px;
+                    padding: 0 5px;
+                    background: rgba(0,0,0,0.75);
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #fafafa;
+                    transition: 0.15s ease left;
+                }
+                    .matrix_thumbs-list .matrix_thumb .matrix_link:hover .matrix_thumb-container .matrix_title {
+                        left: -160px;
+                    }
+                    .matrix_thumbs-list .matrix_thumb.matrix_pics .matrix_link .matrix_thumb-container .matrix_title {
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        transition: 0.15s ease bottom;
+                    }
+                        .matrix_thumbs-list .matrix_thumb.matrix_pics .matrix_link:hover .matrix_thumb-container .matrix_title {
+                            bottom: -30px;
+                        }
+
+.matrix_pager {
+    margin: 10px 0;
+    text-align: center;
+}
+    .matrix_pager li {
+        display: inline-block;
+        margin-bottom: 3px;
+    }
+        .matrix_pager a,
+        .matrix_pager span {
+            display: block;
+            min-width: 40px;
+            height: 40px;
+            padding: 0 10px;
+            border-radius: 50%;
+            background-color: #f8d6a5;
+            font-size: 16px;
+            line-height: 42px;
+            color: #462f0e;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.15s ease background-color;
+        }
+        .matrix_pager span {
+            opacity: 0.5;
+        }
+            .matrix_pager li.matrix_current span {
+                opacity: 1;
+                background-color: #cfa468;
+            }
+            .matrix_pager a:hover {
+                background-color: #9e5c01;
+            }
+
+.matrix_about-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #462f0e;
+}
+
+.matrix_spots {
+    text-align: center;
+}
+    .matrix_spots .matrix_spot {
+        display: none;
+    }
+        .matrix_spots .matrix_spot:nth-child(1) {
+            display: inline-block;
+        }
+
+.matrix_categories-list {
+ 
+}
+    .matrix_categories-list ul {
+        -webkit-columns: 1;
+        columns: 1;
+    }
+        .matrix_categories-list ul li {
+            display: block;
+            padding: 2px 0;
+        }
+            .matrix_categories-list ul li a {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                padding-right: 50px;
+                font-size: 16px;
+                line-height: 24px;
+                color: #462f0e;
+                text-decoration: none;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                transition: 0.15s ease color;
+            }
+                .matrix_categories-list ul li a:hover {
+                    color: #cfa468;
+                }
+
+                .matrix_categories-list ul li a .matrix_quantity {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 0 5px;
+                    border-radius: 3px;
+                    background: #f8d6a5;
+                    font-size: 11px;
+                    color: #f6f5f6;
+                    transition: 0.15s ease color;
+                }
+                    .matrix_categories-list ul li a:hover .matrix_quantity {
+                        color: #462f0e;
+                    }
+
+.matrix_tubes-list {
+
+}
+    .matrix_tubes-list ul {
+        -webkit-columns: 1;
+        columns: 1;
+    }
+        .matrix_tubes-list ul li {
+            display: block;
+            padding: 2px 0;
+        }
+            .matrix_tubes-list ul li a {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                padding-right: 50px;
+                font-size: 16px;
+                line-height: 24px;
+                color: #462f0e;
+                text-decoration: none;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                transition: 0.15s ease color;
+            }
+                .matrix_tubes-list ul li a:hover {
+                    color: #cfa468;
+                }
+.matrix_pics-view-section {
+
+}
+.matrix_pics-view {text-align: center;}
+    .matrix_pics-view .matrix_player-container {
+        position: relative;
+        background: #f8d6a5;
+		display: inline-block;
+		vertical-align:auto;
+		margin-bottom: 10px; }
+        .matrix_pics-view .matrix_player-container img {
+        display: block;
+	    margin:0 auto;
+		height:auto;    
+        width: 100%;
+		border:#e3af66 solid 3px;}
+
+    .matrix_pics-view .matrix_info-container {
+        margin-bottom: 10px;
+    }
+        .matrix_pics-view .matrix_info-container .matrix_info-row {
+            margin-bottom: 10px;
+            border: 1px solid #e3af66;
+            border-top: 0;
+            line-height: 30px;
+            text-align: center;
+        }
+            .matrix_pics-view .matrix_info-container .matrix_info-row .matrix_date {
+                float: left;
+                width: 50%;
+                border-right: 1px solid #e3af66;
+            }
+
+            .matrix_pics-view .matrix_info-container .matrix_info-row .matrix_duration {
+                float: left;
+                width: 50%;
+            }
+        .matrix_pics-view .matrix_info-container .matrix_tags,
+        .matrix_pics-view .matrix_info-container .matrix_sponsor {
+            margin-bottom: 10px;
+        }
+            .matrix_pics-view .matrix_info-container .matrix_tags .matrix_label,
+            .matrix_pics-view .matrix_info-container .matrix_sponsor .matrix_label {
+                display: inline-block;
+                margin-right: 3px;
+				color:#cfa468;
+            }
+            .matrix_pics-view .matrix_info-container .matrix_tags a,
+            .matrix_pics-view .matrix_info-container .matrix_sponsor a {
+                display: inline-block;
+                margin: 0 1px;
+                padding: 0 5px;
+                border-radius: 3px;
+                background: #f8d6a5;
+                line-height: 24px;
+                color: #462f0e;
+                text-decoration: none;
+                transition: 0.15s ease background-color;
+            }
+                .matrix_pics-view .matrix_info-container .matrix_tags a:hover,
+                .matrix_pics-view .matrix_info-container .matrix_sponsor a:hover {
+                    background-color: #cfa468;
+                }
+
+.matrix_sidebar {
+
+}
+    .matrix_sidebar .matrix_side-spots {
+        text-align: center;
+    }
+        .matrix_sidebar .matrix_side-spots .matrix_spot {
+            display: none;
+        }
+            .matrix_sidebar .matrix_side-spots .matrix_spot:nth-child(1) {
+                display: inline-block;
+            }
+
+footer {
+    padding: 10px 0;
+    background: #f8d6a5;
+}
+    footer .matrix_contact-us {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+    }
+        footer .matrix_contact-us a {
+           color: #754909;
+        }
+            footer .matrix_contact-us a:hover {
+                color: #fefdfc;
+            }
+
+    footer .matrix_copyright-container {
+        text-align: center;
+    }
+        footer .matrix_copyright-container .matrix_copyright {
+            font-size: 14px;
+            line-height: 24px;
+            color: #754909;
+        }
+
+@media screen and (min-width: 343px) {
+    .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_title {
+        font-size: 12px;
+    }
+    .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_movies {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 481px) {
+    header {
+        padding: 0;
+    }
+    header .matrix_logo-container {
+        display: table-cell;
+        padding-right: 10px;
+        text-align: left;
+        vertical-align: middle;
+    }
+    header .matrix_search-container {
+        display: table-cell;
+        width: 50%;
+        vertical-align: middle;
+    }
+    .matrix_categories-list ul,
+    .matrix_tubes-list ul {
+        -webkit-columns: 2;
+        columns: 2;
+    }
+    .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_title {
+        font-size: 16px;
+    }
+    .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_movies {
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 614px) {
+    .matrix_spots .matrix_spot:nth-child(2),
+    .matrix_sidebar .matrix_side-spots .matrix_spot:nth-child(2) {
+        display: inline-block;
+    }
+}
+@media screen and (min-width: 669px) {
+    header {
+        padding: 0;
+    }
+    header .matrix_width-wrap {
+        display: table;
+    }
+    header .matrix_logo-container {
+        display: table-cell;
+        padding-right: 20px;
+        vertical-align: middle;
+    }
+    header .matrix_logo-container .matrix_logo {
+        display: block;
+    }
+    header .right-container {
+        display: table-cell;
+        width: 100%;
+        padding-right: 80px;
+        vertical-align: middle;
+    }
+    header .right-container .matrix_search-container {
+        display: block;
+    }
+    section {
+        padding: 10px 0;
+    }
+    .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_title {
+        font-size: 14px;
+    }
+    .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_movies {
+        font-size: 14px;
+    }
+    .matrix_categories-list ul,
+    .matrix_tubes-list ul {
+        -webkit-columns: 3;
+        columns: 3;
+    }
+    .matrix_pics-view {
+        margin-right: 310px;
+    }
+    .matrix_sidebar {
+        position: absolute;
+        right: 5px;
+        top: 29px;
+    }
+    .matrix_sidebar .matrix_side-spots .matrix_spot:nth-child(2) {
+        display: none;
+    }
+    footer .matrix_contact-us {
+        float: left;
+        text-align: left;
+        line-height: 20px;
+    }
+    footer .matrix_copyright-container {
+        float: right;
+        text-align: right;
+    }
+    footer .matrix_copyright-container .matrix_copyright {
+        line-height: 20px;
+    }
+}
+@media screen and (min-width: 918px) {
+    .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_title {
+        font-size: 16px;
+    }
+    .matrix_thumbs-list .matrix_thumb .matrix_link .matrix_thumb-container .matrix_movies {
+        font-size: 16px;
+    }
+    .matrix_spots .matrix_spot:nth-child(3) {
+        display: inline-block;
+    }
+}
+@media screen and (min-width: 995px) {
+    header .matrix_logo-container .matrix_logo {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    header .right-container .language-container {
+        top: 10px;
+        right: 10px;
+    }
+    .matrix_pager a,
+    .matrix_pager span {
+        min-width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .matrix_categories-list ul,
+    .matrix_tubes-list ul {
+        -webkit-columns: 4;
+        columns: 4;
+    }
+    .matrix_sidebar {
+        right: 10px;
+    }
+    .matrix_sidebar .matrix_side-spots .matrix_spot:nth-child(1),
+    .matrix_sidebar .matrix_side-spots .matrix_spot:nth-child(2) {
+        display: block;
+    }
+}
+@media screen and (min-width: 1232px) {
+    .matrix_spots .matrix_spot:nth-child(4) {
+        display: inline-block;
+    }
+}
+@media screen and (min-width: 1313px) {
+    .matrix_categories-list ul,
+    .matrix_tubes-list ul {
+        -webkit-columns: 5;
+        columns: 5;
+    }
+}
+@media screen and (min-width: 1536px) {
+    .matrix_spots .matrix_spot:nth-child(5) {
+        display: inline-block;
+    }
+}
+
+.matrix_thumbs-list .matrix_thumb {
+    width: 50%;
+}
+@media screen and (min-width: 343px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 481px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 33.333333%;
+    }
+}
+@media screen and (min-width: 669px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 25%;
+    }
+}
+@media screen and (min-width: 995px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 20%;
+    }
+}
+@media screen and (min-width: 1313px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 16.666666%;
+    }
+}
+@media screen and (min-width: 343px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 481px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 33.333333%;
+    }
+}
+@media screen and (min-width: 669px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 25%;
+    }
+}
+@media screen and (min-width: 995px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 20%;
+    }
+}
+@media screen and (min-width: 1313px) {
+    .matrix_thumbs-list .matrix_thumb {
+        width: 16.666666%;
+    }
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
